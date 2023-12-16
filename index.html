@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <title>Laravel CRUD Generator</title>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="text-white">Laravel CRUD Generator</h2>
+
+  <div class="form-group">
+    <label for="moduleName" class="text-white">Module Name:</label>
+    <input type="text" id="moduleName" class="form-control">
+  </div>
+
+  <div id="dynamicFields">
+    <!-- Dynamic fields will be added here -->
+  </div>
+
+<div class="row">
+        <button class="btn btn-primary mb-3 " id="add-field" onclick="addDynamicField()">Add Field</button>
+    <div class="col-md-2">
+        <button class="btn btn-success" id="generate-code-btn" onclick="generateCode()">Generate Code</button>
+        <button class="btn btn-info" id="create-new-module" onclick="createNewModule()" style="display: none;">Create New Module</button>
+    </div>
+</div>
+
+  <div class="mt-5 container-card bg-green-box">
+    <h4>Generated Code:</h4>
+    <div id="generatedCode" style="white-space: pre-wrap;"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
